@@ -1,4 +1,7 @@
+//Lista de cartas em objetos
 let baralhoObj = [];
+
+//Lista dos caminhos para o rosto das cartas
 const frenteSrc = [
   "imgs/front-cards/uzumaki.jpg",
   "imgs/front-cards/uchiha.webp",
@@ -8,6 +11,7 @@ const frenteSrc = [
   "imgs/front-cards/sarutobi.jpg"
 ];
 
+//Criação das 12 cartas
 for(let i = 0; i < 12; i++){
   const carta = {
     id: i+1,
@@ -19,7 +23,11 @@ for(let i = 0; i < 12; i++){
   baralhoObj.push(carta);
 }
 
+//Embaralhamento
 baralhoObj = embaralhar(baralhoObj);
+
+//Adicionar as cartas prontas ao HTML
 addCartas(baralhoObj);
 
+//Teste no console
 console.log(baralhoObj);

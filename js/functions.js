@@ -52,15 +52,3 @@ function addCartas(baralhoEmbaralhado) {
     baralho.appendChild(carta);
   });
 }
-
-function virarCarta(virar, carta) {
-  if (!carta.virada) {
-    // Adiciona a classe 'virado' para virar a carta
-    virar.classList.add("virado");
-    carta.virada = true;
-  } else {
-    // Remove a classe 'virado' para voltar ao estado original
-    virar.classList.remove("virado");
-    carta.virada = false;
-  }
-}
