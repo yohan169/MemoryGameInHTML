@@ -1,6 +1,7 @@
 let carta1 = null;
 let carta2 = null;
 let cartasAchadas = [];
+let tentativas = 0;
 
 // Função para verificar se todas as cartas foram encontradas
 function acabou(baralho) {
@@ -52,11 +53,16 @@ function virarCartasIncorretas() {
 
     carta1 = null;
     carta2 = null;
+
+    
 }
 
 // Função para verificar se as cartas viradas são iguais
 function verificarIguais() {
     if (carta1 && carta2) {
+        tentativas++;
+        const tt = document.getElementById("tentativas");
+        tt.innerHTML = tentativas;
         if (carta1.frente === carta2.frente) {
             baralhoObj.forEach((e) => {
                 if (e.frente === carta1.frente) {

@@ -28,6 +28,3 @@ baralhoObj = embaralhar(baralhoObj);
 
 //Adicionar as cartas prontas ao HTML
 addCartas(baralhoObj);
-
-//Teste no console
-console.log(baralhoObj);
